@@ -6,3 +6,4 @@ jupyter>=1.0
 tqdm>=4.66
 seaborn>=0.13
 wandb>=0.16
+torchinfo=1.8.0
