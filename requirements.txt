@@ -1,0 +1,8 @@
+torch==2.11.0
+torchvision==0.26.0
+numpy>=1.26
+matplotlib>=3.8
+jupyter>=1.0
+tqdm>=4.66
+seaborn>=0.13
+wandb>=0.16
