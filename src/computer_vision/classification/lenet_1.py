@@ -69,13 +69,13 @@ class LeNet(torch.nn.Module):
         h2_convolution_filter_3_input = h1_result[:, [2, 3, 4, 5, 6, 7, 8, 9], :, :]
         h2_convolution_filter_4_input = h1_result[:, [3, 4, 5, 6, 7, 8, 9, 10], :, :]
         h2_convolution_filter_5_input = h1_result[:, [4, 5, 6, 7, 8, 9, 10, 11], :, :]
-        h2_convolution_filter_6_input = h1_result[:, [5, 6, 7, 8, 9, 10, 11, 0], :, :]
-        h2_convolution_filter_7_input = h1_result[:, [6, 7, 8, 9, 10, 11, 0, 1], :, :]
-        h2_convolution_filter_8_input = h1_result[:, [7, 8, 9, 10, 11, 0, 1, 2], :, :]
-        h2_convolution_filter_9_input = h1_result[:, [8, 9, 10, 11, 0, 1, 2, 3], :, :]
-        h2_convolution_filter_10_input = h1_result[:, [9, 10, 11, 0, 1, 2, 3, 4], :, :]
-        h2_convolution_filter_11_input = h1_result[:, [10, 11, 0, 1, 2, 3, 4, 5], :, :]
-        h2_convolution_filter_12_input = h1_result[:, [11, 0, 1, 2, 3, 4, 5, 6], :, :]
+        h2_convolution_filter_6_input = h1_result[:, [0, 5, 6, 7, 8, 9, 10, 11], :, :]
+        h2_convolution_filter_7_input = h1_result[:, [0, 1, 6, 7, 8, 9, 10, 11], :, :]
+        h2_convolution_filter_8_input = h1_result[:, [0, 1, 2, 7, 8, 9, 10, 11], :, :]
+        h2_convolution_filter_9_input = h1_result[:, [0, 1, 2, 3, 8, 9, 10, 11], :, :]
+        h2_convolution_filter_10_input = h1_result[:, [0, 1, 2, 3, 4, 9, 10, 11], :, :]
+        h2_convolution_filter_11_input = h1_result[:, [0, 1, 2, 3, 4, 5, 10, 11], :, :]
+        h2_convolution_filter_12_input = h1_result[:, [0, 1, 2, 3, 4, 5, 6, 11], :, :]
 
         # Propapagate all of the h2 inputs to get outputs from the filters
         h2_convolution_filter_1_output = self.h2_convolution_filter_1(h2_convolution_filter_1_input)
