@@ -10,14 +10,14 @@ class LeNet5(torch.nn.Module):
     http://yann.lecun.com/exdb/publis/pdf/lecun-01a.pdf
 
     For detail analysis of the paper have a look at the notebook stored at
-    `computer-vision/notebooks/classification/lenet_1.ipynb`
+    `computer-vision/notebooks/classification/lenet_5.ipynb`
     """
 
     def __init__(self) -> None:
         """
         Method to instantiate object of :class: LeNet5
 
-        :returns: Instance of :class: LeLeNet5Net
+        :returns: Instance of :class: LeNet5
         """
 
         super().__init__()
