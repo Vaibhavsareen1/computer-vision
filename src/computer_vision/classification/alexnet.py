@@ -178,7 +178,7 @@ class AlexNetV2(torch.nn.Module):
         """
         Method to instantiate object of :class: AlexNetV2
 
-        :param: Number of classes to train the model on
+        :param: Number of classes to train the model on. Defaults to 1000 classes
 
         :returns: Instance of :class: AlexNetV2
         """
