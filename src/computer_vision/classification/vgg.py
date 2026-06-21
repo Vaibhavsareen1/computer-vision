@@ -520,7 +520,7 @@ class VGGE(torch.nn.Module):
                                 torch.nn.Conv2d(in_channels=512, out_channels=512, kernel_size=3, stride=1, padding=1, dilation=1, bias=True),
                                 torch.nn.ReLU(),
                                 torch.nn.Conv2d(in_channels=512, out_channels=512, kernel_size=3, stride=1, padding=1, dilation=1, bias=True),
-                                torch.nn.ReLU(),
+                                torch.nn.ReLU(), 
                                 torch.nn.MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1))
 
         self.classifier = torch.nn.Sequential(
