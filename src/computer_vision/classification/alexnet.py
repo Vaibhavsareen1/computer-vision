@@ -185,9 +185,6 @@ class AlexNetV2(torch.nn.Module):
 
         super().__init__()
 
-        self.classes = num_classes
-
-
         self.feature = torch.nn.Sequential(torch.nn.Conv2d(in_channels=3, out_channels=64, kernel_size=11, stride=4, padding=2, dilation=1, bias=True),
                                            torch.nn.ReLU(),
                                            torch.nn.LocalResponseNorm(size=5, alpha=1e-4, beta=0.75, k=2),
@@ -215,7 +212,7 @@ class AlexNetV2(torch.nn.Module):
                                               torch.nn.Dropout1d(p=0.5),
                                               torch.nn.Linear(in_features=4096, out_features=4096, bias=True),
                                               torch.nn.ReLU(),
-                                              torch.nn.Linear(in_features=4096, out_features=self.classes, bias=True))
+                                              torch.nn.Linear(in_features=4096, out_features=num_classes, bias=True))
     
     def forward(self, X: torch.Tensor) -> torch.Tensor:
         """
