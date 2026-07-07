@@ -23,8 +23,7 @@ class VGGA(torch.nn.Module):
         """
 
         super().__init__()
-        
-        self.classes = num_classes
+
 
         self.conv_block_1 = torch.nn.Sequential(
                                 torch.nn.Conv2d(in_channels=3, out_channels=64, kernel_size=3, stride=1, padding=1, dilation=1, bias=True),
@@ -65,7 +64,7 @@ class VGGA(torch.nn.Module):
                             torch.nn.Dropout1d(p=0.5),
                             torch.nn.Linear(in_features=4096, out_features=4096, bias=True),
                             torch.nn.ReLU(),
-                            torch.nn.Linear(in_features=4096, out_features=self.classes, bias=True)
+                            torch.nn.Linear(in_features=4096, out_features=num_classes, bias=True)
         )
 
     def forward(self, X: torch.Tensor) -> torch.Tensor:
@@ -108,8 +107,6 @@ class VGGALRN(torch.nn.Module):
         """
 
         super().__init__()
-        
-        self.classes = num_classes
 
         self.conv_block_1 = torch.nn.Sequential(
                                 torch.nn.Conv2d(in_channels=3, out_channels=64, kernel_size=3, stride=1, padding=1, dilation=1, bias=True),
@@ -151,7 +148,7 @@ class VGGALRN(torch.nn.Module):
                             torch.nn.Dropout1d(p=0.5),
                             torch.nn.Linear(in_features=4096, out_features=4096, bias=True),
                             torch.nn.ReLU(),
-                            torch.nn.Linear(in_features=4096, out_features=self.classes, bias=True)
+                            torch.nn.Linear(in_features=4096, out_features=num_classes, bias=True)
         )
 
     def forward(self, X: torch.Tensor) -> torch.Tensor:
@@ -194,8 +191,6 @@ class VGGB(torch.nn.Module):
         """
 
         super().__init__()
-        
-        self.classes = num_classes
 
         self.conv_block_1 = torch.nn.Sequential(
                                 torch.nn.Conv2d(in_channels=3, out_channels=64, kernel_size=3, stride=1, padding=1, dilation=1, bias=True),
@@ -240,7 +235,7 @@ class VGGB(torch.nn.Module):
                             torch.nn.Dropout1d(p=0.5),
                             torch.nn.Linear(in_features=4096, out_features=4096, bias=True),
                             torch.nn.ReLU(),
-                            torch.nn.Linear(in_features=4096, out_features=self.classes, bias=True)
+                            torch.nn.Linear(in_features=4096, out_features=num_classes, bias=True)
         )
 
     def forward(self, X: torch.Tensor) -> torch.Tensor:
@@ -283,8 +278,7 @@ class VGGC(torch.nn.Module):
         """
 
         super().__init__()
-        
-        self.classes = num_classes
+
 
         self.conv_block_1 = torch.nn.Sequential(
                                 torch.nn.Conv2d(in_channels=3, out_channels=64, kernel_size=3, stride=1, padding=1, dilation=1, bias=True),
@@ -335,7 +329,7 @@ class VGGC(torch.nn.Module):
                             torch.nn.Dropout1d(p=0.5),
                             torch.nn.Linear(in_features=4096, out_features=4096, bias=True),
                             torch.nn.ReLU(),
-                            torch.nn.Linear(in_features=4096, out_features=self.classes, bias=True)
+                            torch.nn.Linear(in_features=4096, out_features=num_classes, bias=True)
         )
 
     def forward(self, X: torch.Tensor) -> torch.Tensor:
@@ -378,8 +372,7 @@ class VGGD(torch.nn.Module):
         """
 
         super().__init__()
-        
-        self.classes = num_classes
+
 
         self.conv_block_1 = torch.nn.Sequential(
                                 torch.nn.Conv2d(in_channels=3, out_channels=64, kernel_size=3, stride=1, padding=1, dilation=1, bias=True),
@@ -430,7 +423,7 @@ class VGGD(torch.nn.Module):
                             torch.nn.Dropout1d(p=0.5),
                             torch.nn.Linear(in_features=4096, out_features=4096, bias=True),
                             torch.nn.ReLU(),
-                            torch.nn.Linear(in_features=4096, out_features=self.classes, bias=True)
+                            torch.nn.Linear(in_features=4096, out_features=num_classes, bias=True)
         )
 
     def forward(self, X: torch.Tensor) -> torch.Tensor:
@@ -473,8 +466,6 @@ class VGGE(torch.nn.Module):
         """
 
         super().__init__()
-        
-        self.classes = num_classes
 
         self.conv_block_1 = torch.nn.Sequential(
                                 torch.nn.Conv2d(in_channels=3, out_channels=64, kernel_size=3, stride=1, padding=1, dilation=1, bias=True),
@@ -531,7 +522,7 @@ class VGGE(torch.nn.Module):
                             torch.nn.Dropout1d(p=0.5),
                             torch.nn.Linear(in_features=4096, out_features=4096, bias=True),
                             torch.nn.ReLU(),
-                            torch.nn.Linear(in_features=4096, out_features=self.classes, bias=True)
+                            torch.nn.Linear(in_features=4096, out_features=num_classes, bias=True)
         )
 
     def forward(self, X: torch.Tensor) -> torch.Tensor:
@@ -578,7 +569,6 @@ class VGGABN(torch.nn.Module):
 
         super().__init__()
         
-        self.classes = num_classes
 
         self.conv_block_1 = torch.nn.Sequential(
                                 torch.nn.Conv2d(in_channels=3, out_channels=64, kernel_size=3, stride=1, padding=1, dilation=1, bias=True),
@@ -627,7 +617,7 @@ class VGGABN(torch.nn.Module):
                             torch.nn.Dropout1d(p=0.5),
                             torch.nn.Linear(in_features=4096, out_features=4096, bias=True),
                             torch.nn.ReLU(),
-                            torch.nn.Linear(in_features=4096, out_features=self.classes, bias=True)
+                            torch.nn.Linear(in_features=4096, out_features=num_classes, bias=True)
         )
 
     def forward(self, X: torch.Tensor) -> torch.Tensor:
@@ -672,8 +662,7 @@ class VGGALRNBN(torch.nn.Module):
         """
 
         super().__init__()
-        
-        self.classes = num_classes
+
 
         self.conv_block_1 = torch.nn.Sequential(
                                 torch.nn.Conv2d(in_channels=3, out_channels=64, kernel_size=3, stride=1, padding=1, dilation=1, bias=True),
@@ -723,7 +712,7 @@ class VGGALRNBN(torch.nn.Module):
                             torch.nn.Dropout1d(p=0.5),
                             torch.nn.Linear(in_features=4096, out_features=4096, bias=True),
                             torch.nn.ReLU(),
-                            torch.nn.Linear(in_features=4096, out_features=self.classes, bias=True)
+                            torch.nn.Linear(in_features=4096, out_features=num_classes, bias=True)
         )
 
     def forward(self, X: torch.Tensor) -> torch.Tensor:
@@ -768,8 +757,6 @@ class VGGBBN(torch.nn.Module):
         """
 
         super().__init__()
-        
-        self.classes = num_classes
 
         self.conv_block_1 = torch.nn.Sequential(
                                 torch.nn.Conv2d(in_channels=3, out_channels=64, kernel_size=3, stride=1, padding=1, dilation=1, bias=True),
@@ -824,7 +811,7 @@ class VGGBBN(torch.nn.Module):
                             torch.nn.Dropout1d(p=0.5),
                             torch.nn.Linear(in_features=4096, out_features=4096, bias=True),
                             torch.nn.ReLU(),
-                            torch.nn.Linear(in_features=4096, out_features=self.classes, bias=True)
+                            torch.nn.Linear(in_features=4096, out_features=num_classes, bias=True)
         )
 
     def forward(self, X: torch.Tensor) -> torch.Tensor:
@@ -869,8 +856,6 @@ class VGGCBN(torch.nn.Module):
         """
 
         super().__init__()
-        
-        self.classes = num_classes
 
         self.conv_block_1 = torch.nn.Sequential(
                                 torch.nn.Conv2d(in_channels=3, out_channels=64, kernel_size=3, stride=1, padding=1, dilation=1, bias=True),
@@ -934,7 +919,7 @@ class VGGCBN(torch.nn.Module):
                             torch.nn.Dropout1d(p=0.5),
                             torch.nn.Linear(in_features=4096, out_features=4096, bias=True),
                             torch.nn.ReLU(),
-                            torch.nn.Linear(in_features=4096, out_features=self.classes, bias=True)
+                            torch.nn.Linear(in_features=4096, out_features=num_classes, bias=True)
         )
 
     def forward(self, X: torch.Tensor) -> torch.Tensor:
@@ -979,8 +964,6 @@ class VGGDBN(torch.nn.Module):
         """
 
         super().__init__()
-        
-        self.classes = num_classes
 
         self.conv_block_1 = torch.nn.Sequential(
                                 torch.nn.Conv2d(in_channels=3, out_channels=64, kernel_size=3, stride=1, padding=1, dilation=1, bias=True),
@@ -1044,7 +1027,7 @@ class VGGDBN(torch.nn.Module):
                             torch.nn.Dropout1d(p=0.5),
                             torch.nn.Linear(in_features=4096, out_features=4096, bias=True),
                             torch.nn.ReLU(),
-                            torch.nn.Linear(in_features=4096, out_features=self.classes, bias=True)
+                            torch.nn.Linear(in_features=4096, out_features=num_classes, bias=True)
         )
 
     def forward(self, X: torch.Tensor) -> torch.Tensor:
@@ -1089,8 +1072,7 @@ class VGGEBN(torch.nn.Module):
         """
 
         super().__init__()
-        
-        self.classes = num_classes
+
 
         self.conv_block_1 = torch.nn.Sequential(
                                 torch.nn.Conv2d(in_channels=3, out_channels=64, kernel_size=3, stride=1, padding=1, dilation=1, bias=True),
@@ -1163,7 +1145,7 @@ class VGGEBN(torch.nn.Module):
                             torch.nn.Dropout1d(p=0.5),
                             torch.nn.Linear(in_features=4096, out_features=4096, bias=True),
                             torch.nn.ReLU(),
-                            torch.nn.Linear(in_features=4096, out_features=self.classes, bias=True)
+                            torch.nn.Linear(in_features=4096, out_features=num_classes, bias=True)
         )
 
     def forward(self, X: torch.Tensor) -> torch.Tensor:
